@@ -9,8 +9,19 @@
 tag=v6-04-16
 
 # Get git down here and clone it.
-git clone http://root.cern.ch/git/root.git $tag
-cd $tag
-git checkout -b $tag $tag
+if [ ! -d root-source ]; then
+  git clone http://root.cern.ch/git/root.git root-source
+  cd root-source
+  git checkout -b $tag $tag
+  cd ..
+fi
+loc=$PWD/root-source
 
+# Configure and build with cmake.
+# Instructions found here: https://root.cern.ch/building-root
+
+mkdir $tag
+cd $tag
+cmake $loc
+cmake --build . -- -j2
 
