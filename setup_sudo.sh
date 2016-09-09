@@ -19,5 +19,5 @@ graphviz-dev libavahi-compat-libdnssd-dev libldap2-dev python-dev libxml2-dev li
 apt-get install -y subversion krb5-config krb5-user
 
 # Required for RootCore builds.
-apt-get install -v libboost1.55-all-dev
-
+apt-get install -y libboost1.55-all-dev
+apt-get install -y doxygen
