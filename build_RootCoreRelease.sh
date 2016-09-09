@@ -14,6 +14,9 @@
 # Which version of rcSetup shoudl we used?
 rcTag=rcSetup-00-04-16
 
+# Which release of RootCore AnalysisBase are we goign to build?
+rel=2.3.53
+
 ##############
 # Get the rcSetup code
 rcSetupDir=rcSetup/$rcTag
@@ -28,7 +31,6 @@ source $dir/setup_RootCore.sh
 
 # Now make 
 # Next, setup and checkout a release for building.
-rel=2.3.51
 mkdir -p $anaLoc/releases
 cd $anaLoc/releases
 rcSetupLocal -d Base,$rel
