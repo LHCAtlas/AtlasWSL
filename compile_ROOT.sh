@@ -7,15 +7,13 @@
 #
 
 tag=v6-04-16
-
 # Get git down here and clone it.
-if [ ! -d root-source ]; then
-  git clone http://root.cern.ch/git/root.git root-source
-  cd root-source
+if [ ! -d ~/ATLAS/root-source ]; then
+  git clone http://root.cern.ch/git/root.git ~/ATLAS/root-source/root
+  cd ~/ATLAS/root-source
   git checkout -b $tag $tag
-  cd ..
 fi
-loc=$PWD/root-source
+loc=~/ATLAS/root-source
 
 # Configure and build with cmake.
 # Instructions found here: https://root.cern.ch/building-root

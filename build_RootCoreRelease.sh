@@ -5,8 +5,8 @@
 # Prereqs:
 #   - kinit so that we have already have access to CERN
 #   - ROOTSYS, etc., should already be defined
-#   - Current directory is where directories, etc., are to be built
-#     containing RootCore tools and, finally, the release.
+#
+#   - This will build everything in ~/ATLAS and below.
 #
 
 # Config
@@ -19,6 +19,7 @@ rel=2.3.53
 
 ##############
 # Get the rcSetup code
+cd ~/ATLAS
 rcSetupDir=rcSetup/$rcTag
 if [ ! -d $rcSetupDir ]; then
   mkdir -p $rcSetupDir
