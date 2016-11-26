@@ -15,7 +15,7 @@
 rcTag=rcSetup-00-04-16
 
 # Which release of RootCore AnalysisBase are we goign to build?
-rel=2.3.53
+rel=2.4.18
 
 ##############
 # Get the rcSetup code
