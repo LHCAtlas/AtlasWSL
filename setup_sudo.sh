@@ -23,6 +23,10 @@ apt-get install -y libboost1.55-all-dev
 apt-get install -y doxygen
 
 # Setup gcc alternatives, and configure gcc 4.9
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
-sudo update-alternatives --config gcc
+if [-d /usr/bin/gcc-4.9]; then
+  update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
+fi
+if [-d /usr/bin/gcc-4.8]; then
+  update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
+fi
+update-alternatives --config gcc
