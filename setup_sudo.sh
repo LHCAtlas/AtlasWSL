@@ -22,11 +22,16 @@ apt-get install -y subversion krb5-config krb5-user
 apt-get install -y libboost1.55-all-dev
 apt-get install -y doxygen
 
+# Clean update
+apt-get -f install -y
+
 # Setup gcc alternatives, and configure gcc 4.9
-if [-d /usr/bin/gcc-4.9]; then
+if [ -e /usr/bin/gcc-4.9 ]
+then
   update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
 fi
-if [-d /usr/bin/gcc-4.8]; then
+if [ -e /usr/bin/gcc-4.8 ]
+then
   update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
 fi
-update-alternatives --config gcc
+update-alternatives --auto gcc

@@ -16,7 +16,7 @@ scriptDir=$v/..
 # This first line makes sure that everything has been correctly setup
 # in the envrionment. Normally you would have to prefex this line
 # by "sudo".
-#. $scriptDir/setup_sudo.sh
+. $scriptDir/setup_sudo.sh
 
 # Next, do the kinit
 #kinit -f gwatts@CERN.CH << EOF
@@ -24,4 +24,4 @@ scriptDir=$v/..
 #EOF
 
 # Next build ROOT
-. $scriptDir/compile_ROOT.sh
+#. $scriptDir/compile_ROOT.sh
