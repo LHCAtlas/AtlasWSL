@@ -47,10 +47,14 @@ apt-get -f install -y
 # Setup gcc alternatives, and configure gcc 4.9
 if [ -e /usr/bin/gcc-4.9 ]
 then
-  update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9
+  update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9 --slave /usr/bin/cpp cpp /usr/bin/cpp-4.9
 fi
 if [ -e /usr/bin/gcc-4.8 ]
 then
-  update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8
+  update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 40 --slave /usr/bin/g++ g++ /usr/bin/g++-4.8 --slave /usr/bin/cpp cpp /usr/bin/cpp-4.8
+fi
+if [ -e /usr/bin/gcc-5 ]
+then
+  update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 50 --slave /usr/bin/g++ g++ /usr/bin/g++-5 --slave /usr/bin/cpp cpp /usr/bin/cpp-5
 fi
 update-alternatives --auto gcc

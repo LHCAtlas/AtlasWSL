@@ -8,14 +8,19 @@
 #
 #   - This will build everything in ~/ATLAS and below.
 #
+# build_RootCoreRelease <rCSetupVersion> <RootCoreVersion>
+#
+# Ex:
+#   build_RootCoreRelease.sh 00-04-16 2.4.18
+#
 
 # Config
 
 # Which version of rcSetup shoudl we used?
-rcTag=rcSetup-00-04-16
+rcTag=rcSetup-$1
 
 # Which release of RootCore AnalysisBase are we goign to build?
-rel=2.4.18
+rel=$2
 
 ##############
 # Get the rcSetup code

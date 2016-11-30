@@ -6,7 +6,7 @@
 # can be built.
 #
 
-tag=v6-04-16
+tag=$1
 # Get git down here and clone it.
 if [ ! -d ~/ATLAS/root-source ]; then
   git clone http://root.cern.ch/git/root.git ~/ATLAS/root-source/root
