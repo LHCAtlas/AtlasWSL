@@ -16,5 +16,8 @@ bash setup_sudo.sh
 REM Create a user account
 lxrun /setdefaultuser /y joeuser
 
+REM Do the kinit. We need to be on a machine that has
+REM the appropriate generic credential for this to work.
+
 REM Download and build everything we need
-bash build_everything.sh v6-04-16
+bash build_everything.sh v6-04-16 00-04-16 4.1.18 gwatts
