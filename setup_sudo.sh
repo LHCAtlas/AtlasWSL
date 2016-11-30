@@ -35,7 +35,7 @@ apt-get install -y build-essential checkinstall gcc-4.9 g++-4.9
 apt-get install -y git dpkg-dev make g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev cmake
 
 apt-get install -y libssl-dev libpcre3-dev xlibmesa-glu-dev libglew1.5-dev libftgl-dev libmysqlclient-dev libfftw3-dev cfitsio-dev \
-graphviz-dev libavahi-compat-libdnssd-dev libldap2-dev python-dev libxml2-dev libkrb5-dev libgsl0-dev libqt4-dev
+graphviz-dev libavahi-compat-libdnssd-dev libldap2-dev python python-dev libxml2-dev libkrb5-dev libgsl0-dev libqt4-dev
 
 # CERN Access. Unfortunately, this will make a demand of the user
 apt-get install -y subversion krb5-config krb5-user
