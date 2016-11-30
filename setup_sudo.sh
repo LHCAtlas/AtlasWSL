@@ -10,8 +10,19 @@ then
   add-apt-repository -y ppa:ubuntu-toolchain-r/test
 fi
 
+
 # Make sure all our sources for repos are up to date
 apt-get update
+
+# Fetch down the default krb5 conf file. If it is already there,
+# then don't touch (presumably the user has already done something to it, order
+# a system install?)
+scriptDir=`dirname $0`
+if [ ! -f /etc/krb5.conf ]
+then
+  cp $scriptDir/../krb5.conf /etc
+fi
+apt-get install -y krb5-user
 
 # Compilers
 apt-get install -y build-essential checkinstall gcc-4.9 g++-4.9
