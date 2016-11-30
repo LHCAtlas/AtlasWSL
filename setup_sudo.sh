@@ -14,7 +14,7 @@ fi
 apt-get update
 
 # Compilers
-apt-get install -y build-essential checkinstall gcc-4.9
+apt-get install -y build-essential checkinstall gcc-4.9 g++-4.9
 
 # ROOT packages needed for building
 
