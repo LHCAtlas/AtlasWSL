@@ -24,10 +24,11 @@
 ROOTVersion=$1
 RCSetupVersion=$2
 RCVersion=$3
+User=$4
 
 # Build root
 ./build_ROOT.sh $ROOTVersion
 
 # Build RootCore and the setup config
 export SVN_USER=gwatts
-./build_RootCoreRelease.sh 00-04-16 2.4.18
+./build_RootCoreRelease.sh $RCSetupVersion $RCVersion $User
