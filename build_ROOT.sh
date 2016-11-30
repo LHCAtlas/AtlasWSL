@@ -6,7 +6,9 @@
 # can be built.
 #
 
+#Config
 tag=$1
+
 # Get git down here and clone it.
 if [ ! -d ~/ATLAS/root-source ]; then
   git clone http://root.cern.ch/git/root.git ~/ATLAS/root-source/root
@@ -14,14 +16,17 @@ fi
 cd ~/ATLAS/root-source/root
 
 # Has the branch been checked out?
+# Do this so we can be sure to do the proper build here.
 git checkout -B $tag $tag
-loc=~/ATLAS/root-source/$tag
 
 # Configure and build with cmake.
 # Instructions found here: https://root.cern.ch/building-root
-
-mkdir -p $loc
-cd $loc
-cmake ~/ATLAS/root-source/root
+loc=~/ATLAS/root-source/$tag
+if [ ! -d $loc ]; then
+  mkdir -p $loc
+  cd $loc
+  cmake ~/ATLAS/root-source/root
+else
+  cd $loc
+fi
 cmake --build . -- -j2
-
