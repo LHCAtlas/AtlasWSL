@@ -8,7 +8,7 @@
 #
 #   - This will build everything in ~/ATLAS and below.
 #
-# build_RootCoreRelease <rCSetupVersion> <RootCoreVersion>
+# build_RootCoreRelease <rCSetupVersion> <RootCoreVersion> <cern-username>
 #
 # Ex:
 #   build_RootCoreRelease.sh 00-04-16 2.4.18
@@ -22,6 +22,18 @@ rcTag=rcSetup-$1
 # Which release of RootCore AnalysisBase are we goign to build?
 rel=$2
 
+# The user which we will configure everything to use
+user=$3
+
+### Where are we, since we will move our PWD around a bit
+dir=`dirname $0`
+if [ "$dir" == "." ]; then
+  dir=$PWD
+fi
+
+# Make sure svn user is setup correctly.
+$dir/configure_ssh_for_cern_svn.sh $user
+
 ##############
 # Get the rcSetup code
 cd ~/ATLAS
@@ -32,7 +44,6 @@ if [ ! -d $rcSetupDir ]; then
 fi
 
 # Load in the rcSetup command.
-dir=`dirname $0`
 source $dir/setup_RootCore.sh
 
 # Now make 
