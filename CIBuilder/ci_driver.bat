@@ -25,4 +25,4 @@ REM close the connection, but ssh will properly update the known_hosts file.
 ssh gwatts@svn.cern.ch -o StrictHostKeyChecking=no
 
 REM Download and build everything we need
-bash build_everything.sh v6-04-16 00-04-16 4.1.18 gwatts
+bash build_everything.sh v6-04-16 00-04-16 2.4.18 gwatts

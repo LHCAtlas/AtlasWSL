@@ -44,16 +44,23 @@ if [ ! -d $rcSetupDir ]; then
 fi
 
 # Load in the rcSetup command.
-source $dir/setup_RootCore.sh
+mkdir -p ~/ATLAS/releases
+if [ ! -e ~/ATLAS/releases/setup_RootCore.sh ]; then
+  cp $dir/setup_RootCore.sh ~/ATLAS/releases
+fi
+source ~/ATLAS/releases/setup_RootCore.sh
 
 # Now make 
 # Next, setup and checkout a release for building.
-mkdir -p $anaLoc/releases
-cd $anaLoc/releases
+cd ~/ATLAS/releases
+pwd
+echo doing checkout
+alias
 rcSetupLocal -d Base,$rel
+echo done with checkout
 
 # Go to the directory where you checked out the sources:
-cd $anaLoc/releases/AnalysisBase/$rel/
+cd ~/ATLAS/releases/AnalysisBase/$rel/
 
 # Tell RootCore where it will find Boost:
 export BOOSTLIBDIR=/usr/lib
