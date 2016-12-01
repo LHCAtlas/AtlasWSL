@@ -30,5 +30,6 @@ User=$4
 ./build_ROOT.sh $ROOTVersion
 
 # Build RootCore and the setup config
+source ~/ATLAS/root-source/$ROOTVersion/bin/thisroot.sh
 export SVN_USER=gwatts
 ./build_RootCoreRelease.sh $RCSetupVersion $RCVersion $User
