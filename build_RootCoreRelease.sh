@@ -71,5 +71,6 @@ source RootCore/scripts/setup.sh
 rc find_packages
 mkdir log
 export ROOTCORELOG=$PWD/log
-rc compile --continue --log-files
+rc compile --continue 
+#--log-files
 rc strip --remove-debug
