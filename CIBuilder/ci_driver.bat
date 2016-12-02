@@ -11,7 +11,7 @@ lxrun /install /y
 
 REM Next, configure the machine as sudo in order to have what is needed
 REM to run software (e.g. have gcc 4.9, etc.).
-bash setup_sudo.sh
+bash -c setup_sudo.sh
 
 REM Create a user account
 lxrun /setdefaultuser joeuser /y
@@ -22,7 +22,7 @@ REM the appropriate generic credential for this to work.
 REM Make sure the host key for the svn machine is in our known_hosts file
 REM so the next step doesn't get hung up. The svn machine will just
 REM close the connection, but ssh will properly update the known_hosts file.
-bash ssh gwatts@svn.cern.ch -o StrictHostKeyChecking=no
+bash -c ssh gwatts@svn.cern.ch -o StrictHostKeyChecking=no
 
 REM Download and build everything we need
-bash build_everything.sh v6-04-16 00-04-16 2.4.18 gwatts
+bash -c build_everything.sh v6-04-16 00-04-16 2.4.18 gwatts
