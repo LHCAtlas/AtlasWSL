@@ -1,0 +1,3 @@
+[submodule "CIBuilder/wsl-bash-wrapper"]
+	path = CIBuilder/wsl-bash-wrapper
+	url = https://github.com/gordonwatts/wsl-bash-wrapper.git
