@@ -28,6 +28,7 @@ REM the appropriate generic credential for this to work.
 REM Make sure the host key for the svn machine is in our known_hosts file
 REM so the next step doesn't get hung up. The svn machine will just
 REM close the connection, but ssh will properly update the known_hosts file.
+BashWrapper -c set
 BashWrapper -c ssh gwatts@svn.cern.ch -o StrictHostKeyChecking=no
 
 REM Download and build everything we need
