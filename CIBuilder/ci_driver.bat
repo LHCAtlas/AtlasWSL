@@ -20,7 +20,9 @@ REM to run software (e.g. have gcc 4.9, etc.).
 BashWrapper -c set
 BashWrapper -c pwd
 BashWrapper -c ls
-BashWrapper -c source setup_sudo.sh
+BashWrapper -c ls setup_sudo.sh
+BashWrapper -c "ls setup_sudo.sh"
+BashWrapper -c "source setup_sudo.sh"
 
 REM Create a user account
 lxrun /setdefaultuser joeuser /y
