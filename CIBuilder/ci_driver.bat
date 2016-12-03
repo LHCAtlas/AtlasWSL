@@ -18,12 +18,12 @@ REM Remove and install the linux subsystem to make sure we are starting
 REM with a clean known state.
 REM This will install with root as the default username.
 
-lxrun /uninstall /full /y
-lxrun /install /y
+REM lxrun /uninstall /full /y
+REM lxrun /install /y
 
 REM Next, configure the machine as sudo in order to have what is needed
 REM to run software (e.g. have gcc 4.9, etc.).
-BashWrapper -c ./setup_sudo.sh
+REM BashWrapper -c ./setup_sudo.sh
 
 REM Create a user account
 lxrun /setdefaultuser joeuser /y

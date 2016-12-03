@@ -20,15 +20,12 @@
 #
 # Pre-req:
 #    - kinit has been done so that release code can be checked out.
-
 ROOTVersion=$1
 RCSetupVersion=$2
 RCVersion=$3
 User=$4
-
 # Build root
 ./build_ROOT.sh $ROOTVersion
-
 # Build RootCore and the setup config
 source ~/ATLAS/root-source/$ROOTVersion/bin/thisroot.sh
 export SVN_USER=gwatts
