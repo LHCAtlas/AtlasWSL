@@ -3,7 +3,6 @@ REM WSL should already be enabled
 REM should be run from the root directory
 
 REM Build the support apps, and add them to the path
-nuget restore
 call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\vsvars32.bat"
 MSBuild.exe /p:Configuration=Release /p:Platform="Any CPU" "CIBuilder\wsl-bash-wrapper\wsl-bash-wrapper.sln"
 set "PATH=%PATH%;%cd%\CIBuilder\wsl-bash-wrapper\wsl-bash-wrapper\bin\Release"
