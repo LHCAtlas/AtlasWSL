@@ -2,7 +2,6 @@
 # Bash code that must be run as sudo in order to make sure that the
 # environment is setup as expected.
 #
-
 # If we are on an older versino of Ubuntu, to get gcc-4.9 we will need to add a repo
 u_version=`lsb_release -c -s`
 if [ "trusty" == $u_version ]
