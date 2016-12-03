@@ -3,6 +3,10 @@
 # environment is setup as expected.
 #
 
+# Looks like somethings have to be done clean, no matter what. If this is put below
+# then it fails to install.
+apt-get install -y git
+
 # If we are on an older versino of Ubuntu, to get gcc-4.9 we will need to add a repo
 u_version=`lsb_release -c -s`
 if [ "trusty" == $u_version ]
@@ -32,7 +36,7 @@ apt-get install -y build-essential checkinstall gcc-4.9 g++-4.9
 
 # ROOT packages needed for building
 
-apt-get install -y git dpkg-dev make g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev cmake
+apt-get install -y dpkg-dev make g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev cmake
 
 apt-get install -y libssl-dev libpcre3-dev xlibmesa-glu-dev libglew1.5-dev libftgl-dev libmysqlclient-dev libfftw3-dev cfitsio-dev \
 graphviz-dev libavahi-compat-libdnssd-dev libldap2-dev python python-dev libxml2-dev libkrb5-dev libgsl0-dev libqt4-dev
