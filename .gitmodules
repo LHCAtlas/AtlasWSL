@@ -1,3 +1,6 @@
 [submodule "CIBuilder/wsl-bash-wrapper"]
 	path = CIBuilder/wsl-bash-wrapper
 	url = https://github.com/gordonwatts/wsl-bash-wrapper.git
+[submodule "CIBuilder/wsl-kinit-secret"]
+	path = CIBuilder/wsl-kinit-secret
+	url = https://github.com/LHCAtlas/wsl-kinit-secret.git
