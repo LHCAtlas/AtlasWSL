@@ -10,7 +10,7 @@ set "PATH=%PATH%;%cd%\CIBuilder\wsl-bash-wrapper\wsl-bash-wrapper\bin\Release"
 cd CIBuilder\wsl-kinit-secret
 nuget restore
 MSBuild.exe /p:Configuration=Release /p:Platform="Any CPU" "wsl-kinit-secret.sln"
-set "PATH=%PATH%;%cd%\wsl-kinit-secret\wsl-kinit\bin\Release"
+set "PATH=%PATH%;%cd%\wsl-kinit\bin\Release"
 
 cd ..\..
 
