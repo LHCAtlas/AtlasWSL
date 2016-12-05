@@ -11,7 +11,10 @@
 # build_RootCoreRelease <rCSetupVersion> <RootCoreVersion> <cern-username>
 #
 # Ex:
-#   build_RootCoreRelease.sh 00-04-16 2.4.18
+#   build_RootCoreRelease.sh 00-04-16 2.4.18 gwatts
+#
+# These build instructions were copied from:
+#	https://twiki.cern.ch/twiki/bin/view/AtlasComputing/SoftwareTutorialxAODEDM#Building_installing_Analysis_AN5
 #
 
 # Config
@@ -69,6 +72,9 @@ export BOOSTINCDIR=/usr/include
 source RootCore/scripts/setup.sh
 # Compile the packages:
 rc find_packages
+# Setup externals, which is missing from the rcSetup
+source RootCore/scripts/setup_external.sh
+# Now, do the build
 mkdir log
 export ROOTCORELOG=$PWD/log
 rc compile --continue 
