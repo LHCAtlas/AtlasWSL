@@ -1,0 +1,5 @@
+# Compiler Error
+error /(?i)error: /
+
+# Compiler Warning
+warning /(?i)warning: /
