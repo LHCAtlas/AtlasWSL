@@ -29,4 +29,6 @@ if [ ! -d $loc ]; then
 else
   cd $loc
 fi
-cmake --build . -- -j2
+
+ncpu=`cat /proc/cpuinfo | grep processor | wc --lines`
+cmake --build . -- -j$ncpu
