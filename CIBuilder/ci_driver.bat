@@ -43,5 +43,5 @@ BashWrapper -c "ssh gwatts@svn.cern.ch -o StrictHostKeyChecking=no"
 
 REM Download and build everything we need
 BashWrapper -c "./build_everything.sh v6-04-16 00-04-16 2.4.18 gwatts"
-BashWrapper -c "cd ~; tar -czf AnalysisBase-02-04-18.tar.gz ATLAS"
+BashWrapper -c "cd ~; rel=`lsb_release --release --short`; tar -czf AnalysisBase-02-04-18-ubuntu-$rel.tar.gz ATLAS"
 BashWrapper -c "mv ~/AnalysisBase-02-04-18.tar.gz ."
