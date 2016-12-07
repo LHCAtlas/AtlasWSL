@@ -38,7 +38,7 @@ apt-get install -y gcc-4.9
 apt-get install -y g++-4.9
 
 # Boost
-sudo apt-get install libboost-all-dev
+sudo apt-get -y install libboost-all-dev
 
 # ROOT packages needed for building
 
