@@ -57,10 +57,8 @@ source ~/ATLAS/releases/setup_RootCore.sh
 # Next, setup and checkout a release for building.
 cd ~/ATLAS/releases
 pwd
-echo doing checkout
 alias
 rcSetupLocal -d Base,$rel
-echo done with checkout
 
 # Go to the directory where you checked out the sources:
 cd ~/ATLAS/releases/AnalysisBase/$rel/
