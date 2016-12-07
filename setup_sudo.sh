@@ -37,8 +37,9 @@ apt-get install -y checkinstall
 apt-get install -y gcc-4.9
 apt-get install -y g++-4.9
 
-# Boost
+# Boost & xml
 sudo apt-get -y install libboost-all-dev
+sudo apt-get -y install libxml2-all-dev
 
 # ROOT packages needed for building
 
