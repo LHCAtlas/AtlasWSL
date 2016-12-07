@@ -70,14 +70,14 @@ export BOOSTLIBDIR=/usr/lib
 export BOOSTINCDIR=/usr/include
 # Set up RootCore:
 source RootCore/scripts/setup.sh
-# Setup externals, which is missing from the rcSetup
-source RootCore/scripts/setup_external.sh
 # Fix up TrigDecisionTool. For a number of the relases it was missing a dependency that was causing a failure
 sed -i "s/PACKAGE_PRELOAD  = $/PACKAGE_PRELOAD  = PyROOT/" TrigDecisionTool/cmt/Makefile.RootCore
 # Compile the packages:
 rc find_packages
 # On advice from Attila, clean everything leftover (potentially) from rcSetup
 rc clean
+# Setup externals, which is missing from the rcSetup
+source RootCore/scripts/setup_external.sh
 # Now, do the build
 mkdir log
 export ROOTCORELOG=$PWD/log
