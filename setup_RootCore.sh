@@ -8,8 +8,6 @@
 anaLoc=~/ATLAS
 rcTag=rcSetup-00-04-16
 
-echo Doing RootCore setup
-
 rcSetupLocal() {
     export rcSetupSite=~/ATLAS/releases
     export PATHRESOLVER_ALLOWHTTPDOWNLOAD=1
