@@ -13,7 +13,5 @@ echo Doing RootCore setup
 rcSetupLocal() {
     export rcSetupSite=~/ATLAS/releases
     export PATHRESOLVER_ALLOWHTTPDOWNLOAD=1
-	echo Hi there. Doing setup.
-	echo Arguments are $*
     source ~/ATLAS/rcSetup/$rcTag/rcSetup.sh $*
 }
