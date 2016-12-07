@@ -78,7 +78,5 @@ rc clean
 source RootCore/scripts/setup_external.sh
 # Now, do the build
 mkdir log
-export ROOTCORELOG=$PWD/log
 rc compile --continue 
-#--log-files
 rc strip --remove-debug
