@@ -70,6 +70,8 @@ export BOOSTLIBDIR=/usr/lib
 export BOOSTINCDIR=/usr/include
 # Set up RootCore:
 source RootCore/scripts/setup.sh
+# Fix up TrigDecisionTool. For a number of the relases it was missing a dependency that was causing a failure
+sed -i "s/PACKAGE_PRELOAD  = $/PACKAGE_PRELOAD  = PyROOT/" TrigDecisionTool/cmt/Makefile.RootCore
 # Compile the packages:
 rc find_packages
 # Setup externals, which is missing from the rcSetup
