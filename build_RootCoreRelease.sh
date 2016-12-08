@@ -56,8 +56,6 @@ source ~/ATLAS/releases/setup_RootCore.sh
 # Now make 
 # Next, setup and checkout a release for building.
 cd ~/ATLAS/releases
-pwd
-alias
 rcSetupLocal -d Base,$rel
 
 # Go to the directory where you checked out the sources:
