@@ -42,7 +42,7 @@ REM close the connection, but ssh will properly update the known_hosts file.
 BashWrapper -c "ssh gwatts@svn.cern.ch -o StrictHostKeyChecking=no"
 
 REM Download and build everything we need
-BashWrapper -c "./build_everything.sh v6-04-16 00-04-16 2.4.18 gwatts"
-BashWrapper -c "./CIBuilder/tar_result.sh 2.4.18-root-v6-04-16"
+BashWrapper -c "./build_everything.sh v6-08-02 00-04-16 2.4.18 gwatts"
+BashWrapper -c "./CIBuilder/tar_result.sh 2.4.18-root-v6-08-02"
 del *.tar.gz
 BashWrapper -c "mv ~/*.tar.gz ."
